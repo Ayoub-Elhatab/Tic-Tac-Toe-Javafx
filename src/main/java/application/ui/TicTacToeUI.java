@@ -15,7 +15,6 @@ public class TicTacToeUI extends Application {
         Image icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/icons/icon.png")));
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/TicTacToe.fxml")));
         primaryStage.setScene(new Scene(root));
-        primaryStage.setTitle("Tic-Tac-Toe");
         primaryStage.getIcons().add(icon);
         primaryStage.setResizable(false);
         primaryStage.show();
