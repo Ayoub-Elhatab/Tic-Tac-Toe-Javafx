@@ -6,7 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
 import java.util.Objects;
 
 public class TicTacToeUI extends Application {
@@ -18,7 +17,7 @@ public class TicTacToeUI extends Application {
         primaryStage.setScene(new Scene(root));
         primaryStage.setTitle("Tic-Tac-Toe");
         primaryStage.getIcons().add(icon);
-        //primaryStage.setResizable(false);
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
