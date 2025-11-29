@@ -10,7 +10,7 @@
 }
 
 .status {
-    -fx-font-size: 20px;
+    -fx-font-size: 23px;
     -fx-fill: #6a1b9a;
 }
 
@@ -29,7 +29,7 @@
 .cell {
     -fx-pref-width: 110;
     -fx-pref-height: 110;
-    -fx-font-size: 36px;
+    -fx-font-size: 39px;
     -fx-font-weight: bold;
     -fx-background-radius: 15;
     -fx-background-color: linear-gradient(to bottom right, #ede7f6, #f3e5f5);
@@ -39,6 +39,7 @@
     -fx-border-color: white;
     -fx-border-radius: 12px;
     -fx-cursor: hand;
+    -fx-text-fill:red;
 }
 
 .cell:hover {

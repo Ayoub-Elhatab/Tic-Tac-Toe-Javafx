@@ -12,26 +12,26 @@
 
     <VBox styleClass="header" alignment="CENTER" spacing="10">
         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Tic Tac Toe" />
-        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="status" text="playerText" />
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="status" fx:id="playerTurn" />
     </VBox>
 
     <GridPane styleClass="board" alignment="CENTER" hgap="10" vgap="10">
-        <Button styleClass="cell" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
-        <Button styleClass="cell" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
-        <Button styleClass="cell" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+        <Button fx:id="btn1" styleClass="cell" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Button fx:id="btn2" styleClass="cell" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Button fx:id="btn3" styleClass="cell" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
 
-        <Button styleClass="cell" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-        <Button styleClass="cell" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
-        <Button styleClass="cell" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+        <Button fx:id="btn4" styleClass="cell" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Button fx:id="btn5" styleClass="cell" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Button fx:id="btn6" styleClass="cell" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
 
-        <Button styleClass="cell" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
-        <Button styleClass="cell" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
-        <Button styleClass="cell" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+        <Button fx:id="btn7" styleClass="cell" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Button fx:id="btn8" styleClass="cell" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <Button fx:id="btn9" styleClass="cell" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
     </GridPane>
 
 
     <HBox styleClass="buttons" alignment="CENTER" spacing="20">
-        <Button mnemonicParsing="false" styleClass="restart-btn" text="Restart"/>
+        <Button mnemonicParsing="false" fx:id="restartBtn" styleClass="restart-btn" text="Restart"/>
         <Button mnemonicParsing="false" fx:id="closeBtn" styleClass="exit-btn" text="Exit"/>
     </HBox>
 </VBox>
