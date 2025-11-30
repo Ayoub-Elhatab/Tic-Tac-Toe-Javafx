@@ -54,7 +54,7 @@ public class TicTacToeController {
     }
 
     private String switchPlayer(String currentPlayer){
-        return (currentPlayer == "X") ? "O" : "X";
+        return (currentPlayer.equals("X")) ? "O" : "X";
     }
 
     public void checkWin(ArrayList<Button> cells){
@@ -71,6 +71,8 @@ public class TicTacToeController {
                 default -> null;
             };
 
+            assert line != null;
+
             if(line.equals("XXX")){
                 playerTurn.setText("X won!");
                 disableAllBtn(cells);
@@ -82,9 +84,11 @@ public class TicTacToeController {
         }
     }
 
-    public void checkDraw(ArrayList <Button> cells){
-        cells.forEach(btn -> {
-        });
+    public void checkDraw(ArrayList<Button> cells){
+        boolean full = cells.stream().allMatch(Button::isDisabled);
+        if (full && !playerTurn.getText().contains("won")) {
+            playerTurn.setText("It's a draw!");
+        }
     }
 
     public void disableAllBtn(ArrayList<Button> cells){
@@ -94,7 +98,7 @@ public class TicTacToeController {
     }
 
     public void restart(ArrayList<Button> cells){
-        restartBtn.setOnMouseClicked(event -> {
+        restartBtn.setOnAction(event -> {
             cells.forEach(btn -> {
                 btn.setText("");
                 if(currentPlayer.equals("O")){
@@ -108,11 +112,9 @@ public class TicTacToeController {
     }
 
     public void close(){
-        closeBtn.setOnMouseClicked(event -> {
+        closeBtn.setOnAction(event -> {
             Stage stage = (Stage) closeBtn.getScene().getWindow();
             stage.close();
         });
     }
-
-
 }
